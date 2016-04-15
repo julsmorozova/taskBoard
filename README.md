@@ -10,7 +10,7 @@ $ npm install webpack-dev-server -g
 
 # Installation
 ```shell
-$ git clone <repo_link>
+$ git clone git@bitbucket.org:julsmorozova/taskboard.git
 $ cd prject_folder
 prject_folder$ npm run build
 ```
