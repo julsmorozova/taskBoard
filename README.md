@@ -11,8 +11,9 @@ $ npm install webpack-dev-server -g
 # Installation
 ```shell
 $ git clone git@bitbucket.org:julsmorozova/taskboard.git
-$ cd prject_folder
-prject_folder$ npm run build
+$ cd taskboard
+taskboard $ npm install
+taskboard $ npm run build
 ```
 
 # Start
