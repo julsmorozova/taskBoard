@@ -1,0 +1,6 @@
+<saveTask value:"Save">
+<addTaskPlaceHolder placeholder:"Add a list...">
+<addCard value:"Add">
+<addCardPlaceholder placeholder:"Add a card...">
+<private "Private">
+<showMenu "Show Menu">

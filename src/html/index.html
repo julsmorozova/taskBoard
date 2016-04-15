@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta name="defaultLanguage" content="en-US">
+  <meta name="availableLanguages" content="en-US, ru-RU">
+  <link rel="localization" href="../locales/website.en-US.l20n">
+  <link rel="localization" href="../locales/website.ru-RU.l20n">
+  <script defer src="../src/libs/l20n.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <ul class="left-buttons">
+      <li class="btn"><a class="boards-menu" href="#">
+        <i class="fa fa-trello" aria-hidden="true"></i>
+      </a></li>
+      <li class="btn"><a class="search" href="#">
+        <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
+      </a></li>
+    </ul>
+    <div class="logo">
+    </div>
+    <ul class="right-buttons">
+      <li class="btn"><a class="create-menu" href="#">&#43;</a>
+      </li>
+      <li class="btn"><a class="user" href="#">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </a></li>
+      <li class="btn">
+        <a class="info" href="#">
+          <span>i</span>
+        </a>
+      </li>
+      <li class="btn"><a class="user" href="#">
+        <i class="fa fa-bell-o" aria-hidden="true"></i>
+      </a></li>
+    </ul>
+  </header>
+  <section class="nav">
+    <ul class="nav-left">
+      <li class="test">TestBoard</li>
+      <li class="star"><i class="fa fa-star-o" aria-hidden="true"></i></li>
+      <li class="private">
+        <i class="fa fa-lock-o" aria-hidden="true"></i>
+        <span data-l10n-id="private">Private</span>
+      </li>
+    </ul>
+    <ul class="nav-right">
+      <li class="show-menu">
+        <span class="dots">...</span>
+        <a href="#" class="show-menu-link" data-l10n-id="showMenu">Show menu</a>
+      </li>
+    </ul>
+  </section>
+  <section class="main">
+    <div id="content"></div>
+  </section>
+  <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+</body>
+</html>

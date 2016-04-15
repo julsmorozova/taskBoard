@@ -1,0 +1,126 @@
+$bg-color-dark: #026aa7;
+$bg-color-primary: rgb(0, 121, 191);
+$bg-color-box: #e2e4e6;
+$bg-btn: linear-gradient(to bottom,rgba(255,255,255,.3) 0,rgba(255,255,255,.2) 100%);
+$color-btn: #f3f3f3;
+$color-primary: #4d4d4d;
+$font: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-size-primary: 14px;
+$padding-btn: 0;
+
+@mixin make-btn ($padding-btn, $bg-btn) {
+	padding: $padding-btn;
+	background: $bg-btn;
+  border-radius: 0.21em;
+  font-weight: 700;
+  min-width: 2.14em;
+  line-height: 2.14em;
+  border: none;
+  color: #eee;
+	&:hover {
+		background-color: rgba(255, 255, 255, .4);
+	}
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin align-items($value: stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+@mixin align-self($value: auto) {
+	-webkit-align-self: $value;
+	-moz-align-self: $value;
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $value == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $value;
+	}
+	align-self: $value;
+}
+
+@mixin flex-basis($value: auto) {
+	-webkit-flex-basis: $value;
+	-moz-flex-basis: $value;
+	-ms-flex-preferred-size: $value;
+	flex-basis: $value;
+}
+
+@mixin flex-wrap($value: nowrap) {
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap: $value;
+	@if $value == nowrap {
+		-ms-flex-wrap: none;
+	} @else {
+		-ms-flex-wrap: $value;
+	}
+	flex-wrap: $value;
+}
+
+@mixin background($bg-color-btn, $bg-color-box) {
+  background: -moz-linear-gradient(top,$bg-color-btn 10%,$bg-color-box 90%);
+  background: -ms-linear-gradient(top,$bg-color-btn 10%,$bg-color-box 90%);
+  background: -o-linear-gradient(top,$bg-color-btn 10%,$bg-color-box 90%);
+  background-image: -webkit-linear-gradient(top,$bg-color-btn 10%,$bg-color-box 90%);
+}
