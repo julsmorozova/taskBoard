@@ -2,9 +2,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var CardForm = React.createClass({
-  submit: function () {
-    this.props.onSubmit();
-  },
   getInitialState: function() {
     return {text: ''};
   },
